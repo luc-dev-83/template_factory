@@ -1,0 +1,60 @@
+.container {
+    background-color: var(--color-background-mute);
+}
+
+.tree-node{
+    margin : 0;
+    padding: 0;
+}
+
+.enum-template, .title-template {
+    display: flex;
+}
+
+.title-label {
+    margin-left: 10px;
+    padding-top: 6px;
+}
+
+.title-buton{
+    margin-right: 10px;
+    margin-left: auto;
+    width: 300px;
+}
+
+.enum-label {
+    margin-left: 10px;
+    width: 75%;
+}
+
+.enum-buton{
+    margin-left: auto;
+}
+
+.children-template {
+    margin-left: 20px;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+
+.bloc-template {
+    margin: 10px 0;
+    border: 1px outset black;
+    padding: 5px;
+}
+
+.v-field {
+  background-color: white;
+  color: black;
+}
+
+.v-field__input {
+    margin: 0;
+    padding: 0;
+}
+
+.v-field__overlay {
+  display: none;
+}
+
+
