@@ -16,4 +16,28 @@ const MODEL1 = {
     ]
 } as {template: TemplateModel[]}
 
-export default { MODEL1 }
+const MODEL2 = {
+    'template':[
+        {'key':'classe', 'type':'string', 'required': true},
+        {'key':'student', 'type':'list', 'required': true, 'referenceId': 'REF_001', 'children': [
+            {'key':'name', 'type':'string', 'required': true},
+            {'key':'age', 'type':'number', 'default': 25, 'required': true},
+            {'key':'man', 'type':'boolean', 'required': true},
+            {'key':'address', 'type':'dictionary', 'required': false, 'referenceId': 'REF_002', 'children':[
+                {'key':'street', 'type':'string', 'required': true},
+                {'key':'city', 'type':'string', 'required': true}
+            ]},
+            {'key':'email', 'type':'enum', 'default':['luc-dev@site.fr'], 'required': true}
+        ]},
+        {'key':'teacher', 'type':'list', 'required': true, 'childrenReferenceId': 'REF_001'},
+        {'key':'parent', 'type':'list', 'required': true, 'children': [
+            {'key':'name', 'type':'string', 'required': true},
+            {'key':'age', 'type':'number', 'default': 25, 'required': true},
+            {'key':'man', 'type':'boolean', 'required': true},
+            {'key':'address', 'type':'dictionary', 'required': false, 'childrenReferenceId': 'REF_002'},
+            {'key':'email', 'type':'enum', 'default':['luc-dev@site.fr'], 'required': true}
+        ]}
+    ]
+} as {template: TemplateModel[]}
+
+export default { MODEL1, MODEL2 }

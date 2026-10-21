@@ -24,8 +24,17 @@ export interface FlatModel {
     level: number,
     path: string,
     type: string,
-    
-
-
-
 }
+
+export type Validator = (value: any) => boolean
+
+export interface ValidationIssue {
+    level: 'ERROR' | 'WARNING' | 'INFO'
+    code: ValidationCode
+    message: string
+    path: string
+    model: TemplateModel
+    key?: string
+    metaModel?: unknown
+}
+

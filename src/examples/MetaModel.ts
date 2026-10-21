@@ -1,6 +1,6 @@
 import type {TemplateModel } from "@/types/template"
 
-const META_MODEL = {
+const MODEL1 = {
     'template':[
         {'key':'name', 'type':'string', 'required': true},        
         {'key':'model', 'type':'list', 'required': true, 'referenceId': 'REF_001', 'children': [
@@ -23,4 +23,4 @@ const META_MODEL = {
     ]
 } as {template: TemplateModel[]}
 
-export default { META_MODEL }
+export default { MODEL1 }
